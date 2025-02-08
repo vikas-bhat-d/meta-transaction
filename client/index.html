@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MetaMask Sign Message</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.0/ethers.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="notification-container hide" onclick="closeOnClick()">
+      <div class="text-content" onclick="closeOnClick()"></div>
+      <div class="data" onclick="closeOnClick()"></div>
+      <i class="bx bx-check"></i>
+    </div>
+    <div class="main-container">
+      <div class="heading">
+        <h1>
+          Sign A Message with <br />
+          Meta-Transaction
+        </h1>
+        <button class="connect-btn" onclick="connectWallet()">
+          Connect Wallet
+        </button>
+      </div>
+
+      <div class="form-container">
+        <div class="input-field">
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="" />
+        </div>
+        <div class="input-field">
+          <label for="phone">Phone Number:</label>
+          <input type="text" id="phone" placeholder="" />
+        </div>
+      </div>
+
+      <button onclick="gasLessSignAndSendTransaction()">Sign and Send</button>
+      <!-- <button onclick="signAndSendTransaction()">Sign and Send</button> -->
+
+      <div class="block-container"></div>
+    </div>
+
+    <script src="notify.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
