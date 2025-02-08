@@ -15,7 +15,7 @@ MetaTransactionStorage is a Solidity smart contract that allows users to store t
 
 - Solidity (`^0.5.16`)
 - Ethereum (Ganache for local testing)
-- Web3.js (for interacting with the contract)
+- ether.js (for interacting with the contract)
 - Truffle (for deployment and testing)
 - Node.js & npm
 
